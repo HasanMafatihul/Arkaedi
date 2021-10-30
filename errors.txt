@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/combat.rpy", line 24: expected menuitem
+    $ stance = "None"
+    ^
+
+Ren'Py Version: Ren'Py 7.4.9.2142
+Thu Oct 14 13:32:05 2021
