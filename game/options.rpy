@@ -62,8 +62,14 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/fantasy1.mp3"
 
+## Sounds that are used when button and imagemaps are clicked.
+
+style button:
+    activate_sound "audio/click.wav"
+style textbutton:
+    activate_sound "audio/click.wav"
 
 ## Transitions #################################################################
 ##

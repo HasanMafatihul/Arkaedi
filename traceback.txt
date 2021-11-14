@@ -1,38 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 36, in script call
-    call combat
-  File "game/scripts/combat.rpy", line 49, in script
-    "Your health increased by [player_atk/2]!"
-KeyError: u'player_atk/2'
+  File "game/scripts/day_1.rpy", line 21, in script
+    mc "(Suatu saat nanti akan kurapikan…)"
+  File "game/script.rpy", line 6, in callbackcontinue
+    renpy.music.play("audio/click.wav",channel="sound", volume=0.5)
+TypeError: play() got an unexpected keyword argument 'volume'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 36, in script call
-    call combat
-  File "game/scripts/combat.rpy", line 49, in script
-    "Your health increased by [player_atk/2]!"
+  File "game/scripts/day_1.rpy", line 21, in script
+    mc "(Suatu saat nanti akan kurapikan…)"
   File "renpy/ast.py", line 721, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "renpy/exports.py", line 1417, in say
     who(what, *args, **kwargs)
-  File "renpy/character.py", line 1222, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "renpy/character.py", line 1141, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "renpy/character.py", line 1121, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "renpy/substitutions.py", line 270, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'player_atk/2'
+  File "renpy/character.py", line 1235, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 887, in do_display
+    **display_args)
+  File "renpy/character.py", line 675, in display_say
+    c("end", interact=interact, type=type, **cb_args)
+  File "game/script.rpy", line 6, in callbackcontinue
+    renpy.music.play("audio/click.wav",channel="sound", volume=0.5)
+TypeError: play() got an unexpected keyword argument 'volume'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.9.2142
 Arkaedi 1.0
-Thu Oct 14 13:33:02 2021
+Sun Nov  7 10:35:38 2021

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/combat.rpy", line 24: expected menuitem
-    $ stance = "None"
-    ^
+File "game/scripts/day_1.rpy", line 100: play requires a file
+    play sound
+              ^
 
 Ren'Py Version: Ren'Py 7.4.9.2142
-Thu Oct 14 13:32:05 2021
+Sun Nov  7 11:41:37 2021

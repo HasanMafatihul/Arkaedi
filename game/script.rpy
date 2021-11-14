@@ -1,39 +1,54 @@
 ﻿# The script of the game goes in this file.
 
+init python:
+    def click():
+        renpy.music.play("audio/click.wav",channel="sound")
+
+    import random # Get the random functionality for Python
+
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
 define g = Character("The Guide")
 define you = Character("You")
+define mc = Character("Dorian")
+define rhea = Character("Rhea")
+define senpai = Character("Laurel")
+define pelayan = Character("Randall")
+define eloise = Character("Eloise")
+define maria = Character("Maria")
+define runa = Character("Runa")
 
 default knowledge = 0
 default question = 0
 default number_question = 4
 
-# The game starts here.
+transform bounce:
+    linear 0.5 yalign 1.0
+    linear 0.5 yalign 0.5
+    repeat
 
+transform rightish:
+    xalign 0.75
+
+transform leftish:
+    xalign 0.25
+
+# The game starts here.
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg bedroom
-
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show guide normal at left
+    #jump tram_station
 
-    # These display lines of dialogue.
-
-    g "Oh, wow, this thing works"
-    "I think I can continue"
-    call question_list from _call_question_list
-
-    call combat from _call_combat
+    jump day_1
 
 label ending:
 
